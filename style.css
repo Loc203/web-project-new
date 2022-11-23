@@ -1,0 +1,240 @@
+:root{
+    --white: #fff;
+    --light: #eeeded;
+    --red: rgb(255, 0, 0);
+}
+body{
+min-height: 100vh;
+line-height: 20px;
+font-family: monospace;
+}
+/* Header */
+header{
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 1px 4px hsl(0 4% 15% / 10%);
+    z-index: 10;
+}
+.nav{
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.logo{
+    font-size: xxx-large;
+    color: black;
+    font-weight: 400;
+    text-decoration: none;
+
+}
+.Shop{
+    color: orange;
+}
+#cart-icon{
+    font-size: xxx-large;
+    cursor: pointer;
+}
+/* Cart content */
+.cart{
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 400px;
+    min-height: 100vh;
+    padding: 20px;
+    box-shadow: -2px 0px 4px hsl(0 4% 15% / 10%);
+    transition: 0.5s;
+}
+.cart.active{
+    right: 0 !important;
+    transition: 0.5s;
+}
+.cart-title{
+    text-align: center;
+    font-size: xxx-large;
+    font-weight: 600;
+    text-decoration: underline;
+    margin-bottom: 71px;
+}
+/* Cart box edit */
+.cart-box{
+    border: 1px solid black;
+    overflow: auto;
+    max-height: 73vh;
+}
+.cart-box .item{
+    display: grid!important;
+    grid-template-columns: 40% 60%;
+    margin-top: 1rem;
+}
+.cart-box .item .img img{
+    width: 150px;
+}
+.cart-box .item .des,
+.cart-box .item .add{
+    display: none;
+}
+.cart-box .item .count,
+.cart-box .item .remove{
+    display: inline-block!important;   
+}
+.cart-box .item .count{
+    border-radius: 5px;
+    border: 1px solid black;
+    outline-color: #ff0000;
+    width: 50px;
+    text-align: center;
+    font-size: 1rem;
+}
+.cart-box .item .btn .remove{
+    color: #000000;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transform: translate(86px,7px);
+}
+.cart-box .item .remove i{
+    font-size: 30px;
+}
+.cart-box .item .btn .remove:hover{
+    color: #ff0000;
+}
+/* Total cart */
+.total{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1px solid black;
+    padding: 20px;
+}
+.total .total-title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+.total .total-price {
+    font-size: 2rem;
+}
+.btn-buy {
+    display: flex;
+    margin: auto auto 0 auto;
+    padding: 12px 20px;
+    border: none;
+    background: #000000;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 25px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.btn-buy:hover{
+    background: #ff0000;
+}
+#close-cart{
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+/* Content center */
+.container{
+    width: 1200px;
+    margin: 50px auto 0; 
+    /* grid-template-columns: 900px ; */
+    /* overflow: hidden; */
+}
+/* List Product */
+.list{
+    justify-content: center;
+    margin-top: 200px;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    column-gap: 20px;
+}
+
+.item .img  img{
+    width: 300px;
+    transition: 0.5s;
+    object-fit: cover;
+}
+.item .img{
+padding: 40px;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 30px;
+}
+.item .content{
+    background-color: #544d4d24;
+    border-radius: 30px;
+    padding: 50px 30px;
+    transform: translate(0, -10px);
+    backdrop-filter: blur(20px);
+    color: rgb(0, 0, 0);
+}
+.title{
+    font-size: x-large;
+    font-weight: bolder;
+}
+.item .content .des{
+    margin: 10px 0;
+}
+.item .content .price{
+    font-size: large;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+.item .content .add {
+    background-color: red;
+    padding: 20px;
+    color: #ffff;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    font-size: large;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.item .content .remove{
+    font-size: large;
+}
+.item .content .count,
+.item .content .remove{
+    display: none;
+}
+.item:hover img {
+    transform: translate(0, -50px);
+}
+.add:hover, .buy:hover {
+    transform: scale(1.1);
+}
+.listPage {
+    padding: 10px;
+    text-align: center;
+    list-style: none;
+}
+.listPage li{
+    background-color: #c3c0c0;
+    padding: 20px;
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.listPage .active{
+    background-color: #747474;
+    color: #ffff;
+}
+
+.content .des{
+    max-height: 100px;
+    overflow: scroll;
+}
+
