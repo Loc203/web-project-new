@@ -32,7 +32,6 @@ header{
     color: black;
     font-weight: 400;
     text-decoration: none;
-
 }
 .Shop{
     color: orange;
@@ -272,6 +271,7 @@ border-radius: 1.875rem;
     max-height: 6.25rem;
     overflow: scroll;
 }
+/* media--------------------------------------------- */
 @media (max-width: 768px){
     .nav{
         padding: 15px;
@@ -338,6 +338,9 @@ border-radius: 1.875rem;
     .cart-box .item .content{
         padding: 21px 16px;
     } 
+    .noti{
+        min-width: 300px!important;
+    }
 }
 @media (max-width: 375px){
     .nav{
@@ -379,4 +382,64 @@ border-radius: 1.875rem;
     .cart-box .item .content{
         padding: 21px 16px;
     } 
+}
+/* notification-------------------- */
+#notification{
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    z-index: 999999;
+}
+.noti{
+    display: fixed;
+    align-items: center;
+    background-color: rgb(255, 255, 255, 0.9);
+    border-radius: 5px;
+    padding: 20px 0;
+    min-width: 400px;
+    max-width: 450px;
+    border-left: 4px solid;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    transition: all linear 0.3s;
+}
+.noti-green{
+    border-color: rgb(0, 255, 0);  
+    position: absolute;
+    transform: translateX(110%);
+    transition: ease-in-out 0.5s;
+}
+.noti-green .noti-icon {
+    color: rgb(0, 255, 0);
+    font-size: 25px;
+    position: absolute;
+    align-items: center;
+    justify-content: center;   
+}
+.noti-green .noti-body .msg{
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    margin-left: 30px;
+}
+.noti-red{
+    border-color: rgb(255, 0, 0); 
+    transform: translateX(110%);
+    transition: ease-in-out 0.5s;
+}
+.noti-red .noti-icon {
+    color: rgb(255, 0, 0);
+    font-size: 25px;
+    position: absolute;
+    align-items: center;
+    justify-content: center;    
+}
+.noti-red .noti-body .msg{
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    margin-left: 30px;
+}
+.noti-green.active,
+.noti-red.active{
+    transform: translateX(0);
 }
