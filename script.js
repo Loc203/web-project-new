@@ -83,12 +83,12 @@ let add = document.querySelectorAll('.item .content .add');
             if(checkIsset == false){
             document.querySelector('.cart-box').appendChild(newItem);
             // Notification
+            countItem();
+            cartTotal();
             notiGreen.classList.add('active');
             setTimeout(function(){
                 notiGreen.classList.remove('active');
             },1000);
-            countItem();
-            cartTotal();
         }}
     })
  })

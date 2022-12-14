@@ -7,11 +7,72 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="themify-icons/themify-icons.css">
 </head>
 <body>
     <header>
         <div class="nav container">
             <a href="#" class="logo"><span class="Laptop">Laptop</span><span class="Shop">Shop</span></a>
+            <ul class="nav center">
+                <li class="header-item center text-light">
+                    <a href="#" class="header-item-text">Laptop</a>
+                    <ul class="subnav">
+                        <li class="all-item"><a class="all-link" href="#">Asus</a></li>
+                        <li class="all-item"><a class="all-link" href="#">Acer</a></li>
+                        <li class="all-item"><a class="all-link" href="#">Msi</a></li>
+                        <li class="all-item"><a class="all-link" href="#">Lenovo</a></li>
+                        <li class="all-item"><a class="all-link" href="#">Hp</a></li>
+                        <li class="all-item"><a class="all-link" href="#">Dell</a></li>
+                    </ul>
+                </li>
+    
+                <li class="header-item center">
+                    <a href="#" class="header-item-text">Linh kiện PC</a>
+                    <ul class="subnav">
+                        <li class="all-item"><a class="all-link" href="#">VGA</a></li>
+                        <li class="all-item"><a class="all-link" href="#">CPU</a></li>
+                        <li class="all-item"><a class="all-link" href="#">RAM</a></li>
+                    </ul>
+                </li>
+    
+                <li class="header-item center">
+                    <a href="#" class="header-item-text">Apple</a>
+                    <ul class="subnav">
+                        <li class="all-item"><a class="all-link" href="#">Macbook</a></li>
+                        <li class="all-item"><a class="all-link" href="#">iMac</a></li>
+                    </ul>
+                </li>
+    
+                <li class="header-item center">
+                    <a href="#" class="header-item-text">Màn hình</a>
+                    <ul class="subnav">
+                        <li class="all-item"><a class="all-link" href="#">LG</a></li>
+                        <li class="all-item"><a class="all-link" href="#">ASUS</a></li>
+                    </ul>
+                </li>
+    
+                <li class="header-item center">
+                    <a href="#" class="header-item-text">Bàn phím</a>
+                    <ul class="subnav">
+                        <li class="all-item"><a class="all-link" href="#">Corsair</a></li>
+                        <li class="all-item"><a class="all-link" href="#">Dare-U</a></li>
+                        <li class="all-item"><a class="all-link" href="#">Logitech</a></li>
+                        <li class="all-item"><a class="all-link" href="#">Rapoo</a></li>
+                        <li class="all-item"><a class="all-link" href="#">Fulhen</a></li>
+                    </ul>
+                </li>
+    
+                <li class="header-item center"> 
+                    <a href="#" class="header-item-text">Chuột</a>
+                    <ul class="subnav">
+                        <li class="all-item"><a class="all-link" href="#">Logitech</a></li>
+                        <li class="all-item"><a class="all-link" href="#">Razer</a></li>
+                        <li class="all-item"><a class="all-link" href="#">Corsair</a></li>
+                    </ul>
+                </li>
+                
+        </ul>
             <i class='bx bx-shopping-bag' id="cart-icon"></i>
             <div class="cart">
                 <h1 class="cart-title">Your Cart</h1>
@@ -50,8 +111,37 @@
             </div>
         </div>
     </header>
-    <div class="container">
-        <div class="center">
+     <!-- Modal
+    <div class="modal" id="myModal">
+        <div class="modal-container">
+                        <div class="modal-close" >
+                           <i class="ti-close" ></i>
+                         </div>
+            <div class="modal-header">                             
+                    <i class ="ti-search" ></i>
+                        Tìm kiếm                                    
+            </div>
+            <div class="modal-body">
+                <label for="" class="modal-label">
+                    <i class="ti-search"></i>
+                        Tìm kiếm
+                </label>
+                <input type="text" class="modal-input" placeholder="Tìm kiếm...">
+                <button id="search">
+                    Tìm kiếm
+                </button>
+
+            </div>
+
+            <div class="modal-footer">
+                <p class="modal-help"> Cần <a href="https://www.google.com/">Hỗ Trợ?</a></p>
+            </div>
+
+        </div>
+        </div> -->
+
+        <!-- Hết Modal -->
+        <div class="container">
         <div class="list">
 <!-- Item 1 -->
             <div class="item" data-key="1">
@@ -480,8 +570,7 @@
                 </div>
             </div>
         </div>
-        </div>
-        <div id="notification">
+        <!-- <div id="notification">
             <div class="noti noti-green">
                 <div class="noti-content">
                     <div class="noti-icon"><i class='bx bxs-check-circle'></i></div>
@@ -496,10 +585,97 @@
                         <div class="msg">Sản phẩm đã được xoá khỏi giỏ hàng!</div>
                     </div>
             </div>
-        </div>
+        </div> -->
         <ul class="listPage">
         </ul>
     </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="container-footer">
+            <!--Bắt Đầu Nội Dung Giới Thiệu-->
+            <div class="noi-dung about">
+                <h2>Về Chúng Tôi</h2>
+                <p>Chúng tôi đảm bảo bạn sẽ có được những trải nghiệm tuyệt vời nhất khi sử dụng các dịch vụ và sản phẩm của LaptopShop.</p>
+                <ul class="social-icon">
+                    <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fa fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <!--Kết Thúc Nội Dung Giới Thiệu-->
+            <!--Bắt Đầu Nội Dung Đường Dẫn-->
+            <div class="noi-dung links">
+                <h2>Đường Dẫn</h2>
+                <ul>
+                    <li><a href="#">Trang Chủ</a></li>
+                    <li><a href="#">Về Chúng Tôi</a></li>
+                    <li><a href="#">Dịch Vụ</a></li>
+                    <li><a href="#">Điều Kiện Chính Sách</a></li>
+                </ul>
+            </div>
+            <!--Kết Thúc Nội Dung Đường Dẫn-->
+            <!--Bắt Đâu Nội Dung Liên Hệ-->
+            <div class="noi-dung contact">
+                <h2>Thông Tin Liên Hệ</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa fa-map-marker"></i></span>
+                        <span>Khu Phố 6,<br />
+                            Thủ Đức, Thành Phố Hồ Chí Minh<br />
+                            Việt Nam</span>
+                    </li>
+                    <li>
+                        <span><i class="fa fa-phone"></i></span>
+                        <p><a href="#">+84 123 456 789</a>
+                            <br />
+                            <a href="#">+84 987 654 321</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa fa-envelope"></i></span>
+                        <p><a href="#">LaptopShop@gmail.com</a></p>
+                   </li>
+                    <li>
+                        <form class="form">
+                            <input type="email" class="form__field" placeholder="Đăng Ký Email" />
+                            <button type="button" class="btn--primary  uppercase">Gửi</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+            <!--Kết Thúc Nội Dung Liên Hệ-->
+        </div>
+    </footer>
+    <!-- Script Modal -->
+    <!-- <script>
+        // Get the modal / event
+        var modal = document.getElementById("myModal");
+        
+        // Get the button that opens the modal / event
+        var btn = document.getElementById("myOpen");
+        
+        // Get the <span> element that closes the modal / event
+        var span = document.getElementsByClassName("modal-close")[0];
+        
+        // When the user clicks the button, open the modal / Mở modal
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+        
+        // When the user clicks on <span> (x), close the modal / Đóng modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it / Bấm ở ngoài modal cũng sẽ đóng modal
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+    </script> -->
     <script src="script.js"></script>
+
 </body>
 </html>
