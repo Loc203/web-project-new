@@ -111,26 +111,44 @@
             </div>
         </div>
     </header>
-     <!-- Modal
+
+     <!-- Modal -->
     <div class="modal" id="myModal">
         <div class="modal-container">
-                        <div class="modal-close" >
-                           <i class="ti-close" ></i>
-                         </div>
+            <!-- <div class="modal-success">
+                <i class='bx bxs-check-circle'></i>
+            </div> -->
+            <div class="modal-close" >
+                <i class='bx bxs-x-circle'></i>
+            </div>
             <div class="modal-header">                             
-                    <i class ="ti-search" ></i>
-                        Tìm kiếm                                    
+                        Xác Nhận Đơn Hàng                                   
             </div>
             <div class="modal-body">
+                <!-- Name -->
                 <label for="" class="modal-label">
-                    <i class="ti-search"></i>
-                        Tìm kiếm
+                    <i class='bx bxs-user' ></i>
+                        Họ và Tên
                 </label>
-                <input type="text" class="modal-input" placeholder="Tìm kiếm...">
-                <button id="search">
-                    Tìm kiếm
+                <input type="text" class="modal-input" placeholder="Nguyễn Văn A...">
+                <!-- Phone -->
+                <label for="" class="modal-label">
+                    <i class='bx bxs-phone' ></i>
+                         Số Điện Thoại
+                </label>
+                <input type="text" class="modal-input" placeholder="012345678...">
+                <!-- Site -->
+                <label for="" class="modal-label">
+                    <i class='bx bxs-map'></i>
+                        Địa Chỉ
+                </label>
+                <input type="text" class="modal-input" placeholder="Đường số 1, thôn B, thành phố HCM...">
+                <!-- Payment method -->
+    
+                <button id="Done">
+                    Hoàn Thành
                 </button>
-
+                
             </div>
 
             <div class="modal-footer">
@@ -138,9 +156,12 @@
             </div>
 
         </div>
-        </div> -->
+    </div>
 
         <!-- Hết Modal -->
+
+
+        <!-- List Product------------ -->
         <div class="container">
         <div class="list">
 <!-- Item 1 -->
@@ -570,7 +591,9 @@
                 </div>
             </div>
         </div>
-        <!-- <div id="notification">
+        
+        <!-- Notification -->
+        <div id="notification">
             <div class="noti noti-green">
                 <div class="noti-content">
                     <div class="noti-icon"><i class='bx bxs-check-circle'></i></div>
@@ -585,11 +608,15 @@
                         <div class="msg">Sản phẩm đã được xoá khỏi giỏ hàng!</div>
                     </div>
             </div>
-        </div> -->
+        </div>
+        <!-- ------------ -->
+        <!-- List Page -->
         <ul class="listPage">
         </ul>
+        <!-- ---------------------------------- -->
     </div>
     </div>
+    <!-- ---------------------------------- -->
     <!-- Footer -->
     <footer>
         <div class="container-footer">
@@ -648,24 +675,31 @@
         </div>
     </footer>
     <!-- Script Modal -->
-    <!-- <script>
+    <script>
+        // Get the Button Done
+        var buttonDone = document.querySelector('#Done');
+
         // Get the modal / event
-        var modal = document.getElementById("myModal");
+        var modal = document.querySelector("#myModal");
         
         // Get the button that opens the modal / event
-        var btn = document.getElementById("myOpen");
+        var btn_buy = document.querySelector(".btn-buy");
         
         // Get the <span> element that closes the modal / event
-        var span = document.getElementsByClassName("modal-close")[0];
+        var modal_close = document.querySelector(".modal-close");
         
         // When the user clicks the button, open the modal / Mở modal
-        btn.onclick = function() {
-          modal.style.display = "block";
+        btn_buy.onclick = function() {
+            modal.style.display = "block";
         }
         
-        // When the user clicks on <span> (x), close the modal / Đóng modal
-        span.onclick = function() {
+        // When the user clicks on (x), close the modal / Đóng modal
+        modal_close.onclick = function() {
           modal.style.display = "none";
+        }
+        // When the user clicks on Done Button, close the modal
+        buttonDone.onclick = () => {
+            modal.style.display = "none";
         }
         
         // When the user clicks anywhere outside of the modal, close it / Bấm ở ngoài modal cũng sẽ đóng modal
@@ -674,7 +708,7 @@
             modal.style.display = "none";
           }
         }
-    </script> -->
+    </script>
     <script src="script.js"></script>
 
 </body>

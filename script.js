@@ -82,9 +82,9 @@ let add = document.querySelectorAll('.item .content .add');
             })
             if(checkIsset == false){
             document.querySelector('.cart-box').appendChild(newItem);
-            // Notification
             countItem();
             cartTotal();
+            // Notification
             notiGreen.classList.add('active');
             setTimeout(function(){
                 notiGreen.classList.remove('active');
