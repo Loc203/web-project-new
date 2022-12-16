@@ -145,3 +145,5 @@ function quantityChanged(event) {
     cartTotal();
 }
 // cart icon when have product inside the cart
+
+
