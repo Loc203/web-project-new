@@ -8,11 +8,17 @@
     .header-mobile {
         display: none;
     }
+    .footer-mobile {
+        display: none;
+    }
 }
 
 /* Tablet */
 @media (min-width: 740px) and (max-width:1023px){
     .header-mobile {
+        display: none;
+    }
+    .footer-mobile {
         display: none;
     }
 }
@@ -121,4 +127,34 @@
     footer {
         display: none;
     }
+
+    .footer-mobile {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-top: 32px;
+        background-color: #ccc;
+    }
+
+    .footer-mobile .noi-dung-footer {
+        text-align: center;
+        padding: 32px 0;
+    }
+
+    .social-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .copyright {
+        opacity: 0.6;
+        margin-top: 16px;
+    }
+
+    
+
+    
+
+    
 }
