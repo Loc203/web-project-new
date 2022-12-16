@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="themify-icons/themify-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <div class="nav container">
             <a href="#" class="logo"><span class="Laptop">Laptop</span><span class="Shop">Shop</span></a>
-            <ul class="nav center">
+            <ul class="nav mobile">
                 <li class="header-item center text-light">
                     <a href="#" class="header-item-text">Laptop</a>
                     <ul class="subnav">
@@ -72,7 +74,7 @@
                     </ul>
                 </li>
                 
-        </ul>
+            </ul>
             <i class='bx bx-shopping-bag' id="cart-icon"></i>
             <div class="cart">
                 <h1 class="cart-title">Your Cart</h1>
@@ -109,6 +111,32 @@
                     <i class='bx bx-log-out bx-rotate-180' id="close-cart"></i>
                 </div>
             </div>
+        </div>
+    </header>
+
+    <!-- Mobile header -->
+    <header class="header-mobile">
+        <div class="container">
+            <nav class="navbar">
+                <!-- logo -->
+                <div class="navbar-logo">
+                    <a href="#" class="logo"><span class="Laptop">Laptop</span><span class="Shop">Shop</span></a>
+                </div>
+                <!-- links -->
+                <ul class="navbar-links">
+                    <li class="navbar-link"><a href="#">Laptop</a></li>
+                    <li class="navbar-link"><a href="#">Apple</a></li>
+                    <li class="navbar-link"><a href="#">Linh kiện</a></li>
+                    <li class="navbar-link"><a href="#">Màn hình</a></li>
+                    <li class="navbar-link"><a href="#">Bàn phím</a></li>
+                    <li class="navbar-link"><a href="#">Chuột</a></li>
+                    
+                </ul>
+                <!-- menu button -->
+                <div class="navbar-icons">
+                    <div class="navbar-icon"></div>
+                </div>
+            </nav>
         </div>
     </header>
 
@@ -644,7 +672,7 @@
             </div>
             <!--Kết Thúc Nội Dung Đường Dẫn-->
             <!--Bắt Đâu Nội Dung Liên Hệ-->
-            <div class="noi-dung contact">
+            <div class="noi-dung contact" >
                 <h2>Thông Tin Liên Hệ</h2>
                 <ul class="info">
                     <li>
@@ -674,6 +702,21 @@
             <!--Kết Thúc Nội Dung Liên Hệ-->
         </div>
     </footer>
+
+    <!-- Mobile footer -->
+    <div class="footer-mobile">
+        <div class="noi-dung-footer">
+           <h2>Follow us:</h2>
+           <ul class="social-icon">
+            <li><a href=""><i class="fa fa-facebook"></i></a></li>
+            <li><a href=""><i class="fa fa-twitter"></i></a></li>
+            <li><a href=""><i class="fa fa-instagram"></i></a></li>
+            <li><a href=""><i class="fa fa-youtube"></i></a></li>
+        </ul>
+           <p class="copyright">Copyright Ⓒ 2022</p>
+        </div>
+        </div>
+    </div>
     <!-- Script Modal -->
     <script>
         // Get the Button Done
@@ -710,6 +753,7 @@
         }
     </script>
     <script src="script.js"></script>
-
+    <!-- responsive js -->
+    <script src="res.js"></script>
 </body>
 </html>
