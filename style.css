@@ -197,7 +197,7 @@ header{
 .header-item-text {
     display: block;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 600;
     text-transform: capitalize;
     transition-duration: 0.3s;
