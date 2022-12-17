@@ -784,9 +784,8 @@ footer .container-footer .noi-dung.about p{
     position: relative;
     background: #fff;
     width: 950px;
-    min-height: 200px;
+    min-height: 400px;
     max-width: calc(100%-32px);
-    
 }
 .modal-header{
     background: #009688;
@@ -813,7 +812,6 @@ footer .container-footer .noi-dung.about p{
 }
 .modal-body{
     padding: 16px;
-
 }
 .modal-label{
     display: block;
@@ -827,16 +825,32 @@ footer .container-footer .noi-dung.about p{
     font-size: 15px;
     margin-bottom: 20px;
 }
-.modal-success{
+.modal-success {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    opacity: 0.9;
+}
+.modal-success i{
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     color: rgb(0, 251, 50);
     padding: 15px;
-    cursor: pointer;
     opacity: 0.9;
     font-size: 150px;
+}
+.modal-success span{
+    left: 50%;
+    top: calc( 50% + 80px);
+    transform: translate(-50%, -50%);
+    width: max-content;
+    position: absolute;
+    font-size: large;
 }
 
 #Done{
@@ -858,4 +872,6 @@ footer .container-footer .noi-dung.about p{
     padding:10px;
     border-radius: 0;
     border: none;
+    bottom: 0;
+    right: 0;
 }

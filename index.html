@@ -9,8 +9,10 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
+    // Header PC
     <header>
         <div class="nav container">
             <a href="#" class="logo"><span class="Laptop">Laptop</span><span class="Shop">Shop</span></a>
@@ -111,18 +113,44 @@
             </div>
         </div>
     </header>
-
+        <!-- Mobile header -->
+        <header class="header-mobile">
+            <div class="container">
+                <nav class="navbar">
+                    <!-- logo -->
+                    <div class="navbar-logo">
+                        <a href="#" class="logo"><span class="Laptop">Laptop</span><span class="Shop">Shop</span></a>
+                    </div>
+                    <!-- links -->
+                    <ul class="navbar-links">
+                        <li class="navbar-link"><a href="#">Laptop</a></li>
+                        <li class="navbar-link"><a href="#">Apple</a></li>
+                        <li class="navbar-link"><a href="#">Linh kiện</a></li>
+                        <li class="navbar-link"><a href="#">Màn hình</a></li>
+                        <li class="navbar-link"><a href="#">Bàn phím</a></li>
+                        <li class="navbar-link"><a href="#">Chuột</a></li>
+    
+                    </ul>
+                    <!-- menu button -->
+                    <div class="navbar-icons">
+                        <div class="navbar-icon"></div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    
      <!-- Modal -->
     <div class="modal" id="myModal">
         <div class="modal-container">
-            <!-- <div class="modal-success">
-                <i class='bx bxs-check-circle'></i>
-            </div> -->
             <div class="modal-close" >
                 <i class='bx bxs-x-circle'></i>
             </div>
             <div class="modal-header">                             
-                        Xác Nhận Đơn Hàng                                   
+                Xác Nhận Đơn Hàng                                   
+            </div>
+            <div class="modal-success">
+                <i class='bx bxs-check-circle'></i>
+                <span>Thông tin của bạn đã được xác nhận thành công!</span>    
             </div>
             <div class="modal-body">
                 <!-- Name -->
@@ -159,8 +187,6 @@
     </div>
 
         <!-- Hết Modal -->
-
-
         <!-- List Product------------ -->
         <div class="container">
         <div class="list">
@@ -674,42 +700,152 @@
             <!--Kết Thúc Nội Dung Liên Hệ-->
         </div>
     </footer>
+    <!-- Mobile footer -->
+    <div class="footer-mobile">
+        <div class="noi-dung-footer">
+           <h2>Follow us:</h2>
+           <ul class="social-icon">
+            <li><a href=""><i class="fa fa-facebook"></i></a></li>
+            <li><a href=""><i class="fa fa-twitter"></i></a></li>
+            <li><a href=""><i class="fa fa-instagram"></i></a></li>
+            <li><a href=""><i class="fa fa-youtube"></i></a></li>
+        </ul>
+           <p class="copyright">Copyright Ⓒ 2022</p>
+        </div>
+        </div>
+    </div>
     <!-- Script Modal -->
     <script>
-        // Get the Button Done
-        var buttonDone = document.querySelector('#Done');
-
-        // Get the modal / event
-        var modal = document.querySelector("#myModal");
-        
         // Get the button that opens the modal / event
         var btn_buy = document.querySelector(".btn-buy");
         
-        // Get the <span> element that closes the modal / event
-        var modal_close = document.querySelector(".modal-close");
+        // Get the modal / event
+        var modal = document.querySelector("#myModal");
         
+        // Get the Button Done
+        var buttonDone = document.querySelector('#Done');
+        
+        // Get the <span> element that closes the modal / event
+        // var modal_close = document.querySelector(".modal-close");
+
+        // // Get the modal-body
+        // var modal_body = document.querySelector(".modal-body");
+
+        // // Get the modal-success
+        // var modal_success = document.querySelector(".modal-success");
+
+        // // Get the modal-footer
+        // var modal_footer = document.querySelector(".modal-footer");
+
+        // // Get the modal-container
+        // var modal_container = document.querySelector(".modal-container");
+
         // When the user clicks the button, open the modal / Mở modal
         btn_buy.onclick = function() {
+            windowClose();
             modal.style.display = "block";
+            modalClose();
+            modalDone();
+            
         }
+        
         
         // When the user clicks on (x), close the modal / Đóng modal
-        modal_close.onclick = function() {
-          modal.style.display = "none";
-        }
-        // When the user clicks on Done Button, close the modal
-        buttonDone.onclick = () => {
+        function modalClose(){
+            // Get the <span> element that closes the modal / event
+            var modal_close = document.querySelector(".modal-close");
+            modal_close.onclick = function() {
             modal.style.display = "none";
         }
+        }
+
         
+        // When the user clicks on Done Button, close the modal-body, open modal-success
+        function modalDone() {
+            var buttonDone = document.querySelector('#Done');
+            // Get the modal-body
+            var modal_body = document.querySelector(".modal-body");
+
+            // Get the modal-success
+            var modal_success = document.querySelector(".modal-success");
+
+            // Get the modal-footer
+            var modal_footer = document.querySelector(".modal-footer");
+
+            // Get the modal-container
+            var modal_container = document.querySelector(".modal-container");
+
+            buttonDone.onclick = () => {
+            modal_footer.style.display = "none";
+            modal_body.style.display = "none";
+            modal_success.style.display = "block";
+            let listCart = document.querySelectorAll('.cart-box .item');
+            listCart.forEach(item =>{
+                item.remove();
+                return;
+                })
+                countItem();
+                cartTotal();
+        }
+        }
+        
+        function windowClose(){
+            modal.style.display = "none";
+               modal.innerHTML = `
+        <div class="modal-container">
+            <div class="modal-close" >
+                <i class='bx bxs-x-circle'></i>
+            </div>
+            <div class="modal-header">                             
+                Xác Nhận Đơn Hàng                                   
+            </div>
+            <div class="modal-success">
+                <i class='bx bxs-check-circle'></i>
+                <span>Thông tin của bạn đã được xác nhận thành công!</span>    
+            </div>
+            <div class="modal-body">
+                <!-- Name -->
+                <label for="" class="modal-label">
+                    <i class='bx bxs-user' ></i>
+                        Họ và Tên
+                </label>
+                <input type="text" class="modal-input" placeholder="Nguyễn Văn A...">
+                <!-- Phone -->
+                <label for="" class="modal-label">
+                    <i class='bx bxs-phone' ></i>
+                         Số Điện Thoại
+                </label>
+                <input type="text" class="modal-input" placeholder="012345678...">
+                <!-- Site -->
+                <label for="" class="modal-label">
+                    <i class='bx bxs-map'></i>
+                        Địa Chỉ
+                </label>
+                <input type="text" class="modal-input" placeholder="Đường số 1, thôn B, thành phố HCM...">
+                <!-- Payment method -->
+    
+                <button id="Done">
+                    Hoàn Thành
+                </button>
+                
+            </div>
+
+            <div class="modal-footer">
+                <p class="modal-help"> Cần <a href="https://www.google.com/">Hỗ Trợ?</a></p>
+            </div>
+         </div>`;
+                
+        }
+
         // When the user clicks anywhere outside of the modal, close it / Bấm ở ngoài modal cũng sẽ đóng modal
         window.onclick = function(event) {
           if (event.target == modal) {
             modal.style.display = "none";
+            console.log(window);
           }
         }
     </script>
     <script src="script.js"></script>
-
+    <script src="responsive.js"></script>
 </body>
 </html>
