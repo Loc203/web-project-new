@@ -4,7 +4,7 @@
 }
 
 /* PC */
-@media (min-width: 1024px) {
+@media (min-width: 769px) {
     .header-mobile {
         display: none;
     }
@@ -14,17 +14,17 @@
 }
 
 /* Tablet */
-@media (min-width: 740px) and (max-width:1023px){
+/* @media (min-width: 740px) and (max-width:1023px){
     .header-mobile {
         display: none;
     }
     .footer-mobile {
         display: none;
     }
-}
+} */
 
 /* Mobile */
-@media (max-width: 739px) {
+@media (max-width: 768px) {
     /* mobile header */
     .nav {
         display: none;
@@ -51,6 +51,8 @@
         position: fixed;
         top: 0;
         left: 0;
+        bottom: 0;
+        right: 0;
         width: 60%;
         height: 100%;
         background-color: #fff;

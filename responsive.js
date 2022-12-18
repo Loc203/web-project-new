@@ -5,3 +5,4 @@ const menuButton = document.querySelector('.navbar-icons');
   menuButton.addEventListener('click', ()=>{
     menu.classList.toggle('navbar-open');
   });
+  
